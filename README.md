@@ -28,6 +28,8 @@ attack_anim = Animation(fps=20, attack_spritesheet, tilesize=(16,16), one_shot=T
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
+        # self.image before AnimationPlayer.__init__()
+        self.image = None
         self.animation_player = AnimationPlayer(
             self, 
             idle=idle_anim,
