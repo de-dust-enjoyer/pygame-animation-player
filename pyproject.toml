@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pygame-animation-player"
 version = "1.0.0"
 authors = [
-    {name = "de-dust-enjoyer", email = "no_user@no_host.com"},
+    {name = "de-dust-enjoyer", email = "simonhartig75@gmail.com"},
 ]
 description = "A simple animation player for pygame sprites"
 readme = "README.md"

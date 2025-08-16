@@ -59,8 +59,3 @@ while True:
     screen.fill("black")
     screen.blit(player.scale_by(10), player.rect)
     pygame.display.flip()
-
-
-
-
-

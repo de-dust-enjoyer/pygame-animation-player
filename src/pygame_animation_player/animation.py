@@ -57,7 +57,7 @@ class Animation:
                 # creates the sprite surface with transparancy enabled
                 surf = pygame.Surface((tilesize), pygame.SRCALPHA)
                 # draws the desired part of the spritesheet onto sprite surface
-                surf.blit(spritesheet , area=(x*tilesize[0],y*tilesize[1],tilesize[0],tilesize[1]))
+                surf.blit(spritesheet , (0,0), area=(x*tilesize[0],y*tilesize[1],tilesize[0],tilesize[1]))
                 # adds the sprite surface to the list
                 sprites.append(surf)
 

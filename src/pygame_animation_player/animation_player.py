@@ -1,5 +1,5 @@
 import pygame
-from animation import Animation
+from .animation import Animation
 from typing import Dict, Optional, List
 
 class AnimationPlayer:
@@ -9,6 +9,8 @@ class AnimationPlayer:
     class Player(pygame.sprite.Sprite):
         def __init__(self):
             super().__init__()
+            # self.image must be declared before AnimationPlayer.__init__()
+            self.image = None
             self.animation_player = AnimationPlayer(self, 
                                     run= Animation(10, pygame.image.load('assets/player/run.png').convert_alpha(), tilesize=(8, 16))
                                     idle= Animation(0, pygame.image.load('assets/player/idle.png').convert_alpha()))
@@ -21,7 +23,7 @@ class AnimationPlayer:
                 self.animation_player.play('attack', restart= True, force_finish= True)"""
 
 
-    def __init__(self, parent:pygame.sprite.Sprite, **animations:Animation):
+    def __init__(self, parent:pygame.sprite.Sprite, **animations:Animation) -> None:
         if not animations:
             raise ValueError("AnimationPlayer needs at least one animation!")
 
@@ -39,7 +41,8 @@ class AnimationPlayer:
         first_animation = next(iter(self.animations))
         self.play(first_animation)
 
-    def add_animation(self, name: str, new_animation: Animation):
+
+    def add_animation(self, name: str, new_animation: Animation) -> None:
         """add a new animation as a Animation object"""
         self.animations[name] = new_animation
 
