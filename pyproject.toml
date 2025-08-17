@@ -26,7 +26,7 @@ classifiers = [
 ]
 keywords = ["pygame", "animation", "sprites", "game development"]
 dependencies = [
-    "pygame>=2.0.0",
+    "pygame-ce>=2.0.0",
 ]
 
 [project.optional-dependencies]
