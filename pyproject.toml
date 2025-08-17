@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pygame-animation-player"
-version = "1.0.2"
+version = "1.0.3"
 authors = [
     {name = "de-dust-enjoyer", email = "dedustenjoyer@gmail.com"},
 ]
